@@ -23,9 +23,7 @@ end
 
 SlashCmdList["IGD"] = handler
 
-function frmMain_OnLoad()
 
-end
 
 function btnClose_OnClick()
 	frmMain:Hide()

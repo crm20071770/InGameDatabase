@@ -1,4 +1,4 @@
-## Author: Chris
+## Author: Chris Myles
 ## Interface: 50100
 ## Title: InGameDatabase
 ## Version: 1.0
