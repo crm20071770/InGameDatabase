@@ -1,0 +1,99 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Frame.lua" />
+	<Frame name="frmMain" movable="true">
+		<Size>
+			<AbsDimension x="638" y="629" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset x="33" y="-17" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" text="TODO: Replace with browse dropdown">
+					<Size>
+						<AbsDimension x="242" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="22" y="-22" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="lblSearch" inherits="GameFontNormal" text="Search">
+					<Size>
+						<AbsDimension x="148" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="32" y="-76" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="lblSearchName" inherits="GameFontNormal" text="Name">
+					<Size>
+						<AbsDimension x="52" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="22" y="-105" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button name="btnClose" inherits="UIPanelButtonTemplate" text="Close">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="526" y="-584" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						btnClose_OnClick()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<EditBox inherits="InputBoxTemplate">
+				<Size>
+					<AbsDimension x="135" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="80" y="-102" />
+					</Anchor>
+				</Anchors>
+			</EditBox>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				Frame1_OnLoad()
+				self:RegisterForDrag("LeftButton");
+
+				frame_OnLoad()
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving();
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing();
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>
