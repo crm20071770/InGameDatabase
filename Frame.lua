@@ -23,8 +23,6 @@ end
 
 SlashCmdList["IGD"] = handler
 
-
-
 function btnClose_OnClick()
 	frmMain:Hide()
 end
@@ -41,4 +39,8 @@ function search(array, key)
 		else return mid
 		end
 	end
+end
+
+function frmMain_OnLoad()
+	
 end
